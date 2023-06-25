@@ -8,7 +8,7 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import java.util.List;
 import java.util.Set;
 
-@RegisterRestClient(baseUri = "https://stage.code.quarkus.io/api")
+@RegisterRestClient(configKey = "quarkus-api-rest-client")
 public interface QuarkusApiRestClient {
 
     @GET

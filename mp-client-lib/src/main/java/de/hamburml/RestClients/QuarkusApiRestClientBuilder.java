@@ -1,5 +1,6 @@
 package de.hamburml.RestClients;
 
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.rest.client.RestClientBuilder;
 
 import java.net.URI;
@@ -7,6 +8,9 @@ import java.net.URI;
 public class QuarkusApiRestClientBuilder {
 
     RestClientBuilder quarkusRestApiBuilder;
+
+    @ConfigProperty(name = "greeting.message")
+    String baseUri;
 
     public QuarkusApiRestClientBuilder() {
         this.quarkusRestApiBuilder = RestClientBuilder.newBuilder();
@@ -17,7 +21,7 @@ public class QuarkusApiRestClientBuilder {
     }
 
     public QuarkusApiRestClientBuilder withDefaults() {
-        this.baseUri("https://stage.code.quarkus.io/api");
+        this.baseUri(baseUri);
         return this;
     }
 
