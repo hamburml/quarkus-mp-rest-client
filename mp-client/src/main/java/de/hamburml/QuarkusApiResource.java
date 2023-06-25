@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import de.hamburml.RestClients.QuarkusApiRestClient;
 import de.hamburml.service.SpecificQuarkusApiService;
 import jakarta.annotation.PostConstruct;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -13,6 +14,7 @@ import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 @Path("/quarkusapi")
+@ApplicationScoped
 public class QuarkusApiResource {
 
     @Inject
