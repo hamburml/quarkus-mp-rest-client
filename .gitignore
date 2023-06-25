@@ -41,3 +41,36 @@ nb-configuration.xml
 
 # Plugin directory
 /.quarkus/cli/plugins/
+
+target
+!.idea/runConfigurations
+.settings
+.vscode/
+*~
+local-test
+out
+lib
+bin
+!devtools/cli/distribution/java-binary/bin
+dependency-reduced-pom.xml
+derby.log
+hotspot.log
+.directory
+.java-version
+.graal-install
+hs_err_pid*.log
+dumps
+graph-output.dot
+ObjectStore
+.gradle
+docker/distroless/bazel-*
+/.apt_generated_tests/
+quarkus.log
+quarkus.log*
+replay_*.logß
+nbactions.xml
+.cache
+/lsp/
+.envrc
+.jekyll-cache
+.mvn/.gradle-enterprise
