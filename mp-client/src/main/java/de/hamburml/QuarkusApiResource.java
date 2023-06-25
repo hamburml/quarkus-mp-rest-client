@@ -2,7 +2,9 @@ package de.hamburml;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import de.hamburml.RestClients.QuarkusApiRestClient;
 import de.hamburml.service.SpecificQuarkusApiService;
+import jakarta.annotation.PostConstruct;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -22,7 +24,9 @@ public class QuarkusApiResource {
     @RestClient
     QuarkusApiRestClient quarkusApiRestClient;
 
-    public QuarkusApiResource() {
+
+    @PostConstruct
+    public void setup() {
         quarkusApiService = new SpecificQuarkusApiService();
     }
 

@@ -1,6 +1,5 @@
-package de.hamburml.provider.RestClients;
+package de.hamburml.RestClients;
 
-import de.hamburml.QuarkusApiRestClient;
 import org.eclipse.microprofile.rest.client.RestClientBuilder;
 
 import java.net.URI;
